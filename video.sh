@@ -22,5 +22,8 @@ hour=$(date +%H)
 
 # For Raspberry Pi 4 or earlier, save MP4 file
 
+# Describe video file name with timestamp variable
+# Create log file
+# Add duration 
 
 rpicam-vid -t 10s --codec libav -o test.mp4
