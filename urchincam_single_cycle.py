@@ -70,6 +70,7 @@ def start_camera_recording(duration_secs):
 def half_hour_cycle():  
     duration = 30 * 60   
     start_camera_recording(duration)
+    time.sleep(10)
 
 # Start the scheduler
 half_hour_cycle ()
