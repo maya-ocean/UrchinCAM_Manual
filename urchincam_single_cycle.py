@@ -65,49 +65,11 @@ def start_camera_recording(duration_secs):
         log (f"ERROR: Failed to record video.")
         log (f"Command: {e.cmd}")
         log (f"Exit code: {e.returncode}")
-        
-# Calculate seconds until next hour or half-hour
-def seconds_until_next_slot(current_time):
-    minute = current_time.minute
-    second = current_time.second
-
-    if minute < 30:
-        next_slot = current_time.replace(minute=30, second=0, microsecond=0)
-    else:
-        next_slot = (current_time + timedelta(hours=1)).replace(minute=0, second=0, microsecond=0)
-
-    delta = (next_slot - current_time).total_seconds()
-    return int(delta)
 
 # Main loop
-def continuous_half_hour_segments(max_runtime_secs=72*3600): # Sets max runtime to 72 hours.    
-    global should_exit
-    first_run = True
-    start_time = time.time ()
+def half_hour_cycle():  
+    duration = 30 * 60   
+    start_camera_recording(duration)
 
-    while not should_exit:
-        now = datetime.now ()
-
-        # Check if runtime exceeded
-        elapsed = time.time() - start_time
-        if elapsed >= max_runtime_secs:
-            print (f"[{now.strftime('%H:%M:%S')}] 72 hours reached - exiting.")
-            log ("72 hours reached - exiting.")
-            break
-
-        # Determine duration for this segment 
-        if first_run:
-            duration = (seconds_until_next_slot(now) - 60) # Subtracts one minute from duration as buffer. 
-            print(f"First run [{now.strftime('%H:%M:%S')}]  — recording until next half-hour or hour.")
-            log ("First run — recording until next half-hour or hour.")
-            
-            start_camera_recording(duration)
-            first_run = False
-            continue
-        else:
-            # Run current time through duration calculation.
-            duration = seconds_until_next_slot (now)
-            start_camera_recording (duration)
-        
 # Start the scheduler
-continuous_half_hour_segments()
+half_hour_cycle ()
