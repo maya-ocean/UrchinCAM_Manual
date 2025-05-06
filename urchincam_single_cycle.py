@@ -37,7 +37,7 @@ def start_camera_recording(duration_secs):
     log (f"Recording for {duration_secs} seconds → {mp4_file}")
    
     command = [
-        "rpicam-vid",
+        "libcamera-vid",
         "-t", str(duration_secs * 1000),
         "-o", h264_file,
         "--inline",
@@ -68,7 +68,7 @@ def start_camera_recording(duration_secs):
 
 # Main loop
 def half_hour_cycle():  
-    duration = 30 * 60   
+    duration = 29 * 60   
     start_camera_recording(duration)
     time.sleep(10)
 
