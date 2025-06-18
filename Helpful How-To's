@@ -1,0 +1,40 @@
+# HOW TO: Run python code in bash
+# Open bash in terminal
+nano ~/.bashrc
+# Scroll to the bottom and add
+python3 /home/pi/path/to/your_script.py &
+# Save and exit: CTRL+O, Enter, CTRL+X
+# Apply changes
+source ~/.bashrc
+
+# HOW TO: Kill camera process
+# Find process ID in terminal
+lsof | grep video
+# Identify PID that corresponds to rpicam-vid, usually 4 digit integral
+# Kill PID
+sudo kill -9 PID
+
+# HOW TO: Kill all python files
+pkill -f python
+
+# HOW TO: Shutdown or reboot the Raspberry Pi
+# Open terminal
+# Shutdown
+sudo shutdown -h now
+# Reboot
+sudo reboot -h now
+
+# HOW TO: Download code from GitHub
+# Install git
+sudo echo "Y" | sudo apt-get install git
+sudo reboot
+# Install a package or file from GitHub
+cd /path
+wget https://raw.githubusercontent.com/user/repository_name/branch/file_name.py
+
+# HOW TO: Set Raspberry Pi time
+# For now
+sudo date -s “2025-03-10 10:53:00”
+# Forever
+sudo apt install chrony
+sudo nano /etc/chrony/chrony.conf
