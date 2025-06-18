@@ -44,3 +44,13 @@ sudo date -s “2025-03-10 10:53:00”
 # Forever
 sudo apt install chrony
 sudo nano /etc/chrony/chrony.conf
+
+# HOW TO: Configure Raspberry Pi 
+# Interfaces: 
+  # SSH enable
+  # I2C enable
+  # Serial Port enable
+  # all else disable 
+# Localization:
+  # Keyboard 
+
