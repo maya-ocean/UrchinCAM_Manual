@@ -7,6 +7,12 @@ python3 /home/pi/path/to/your_script.py &
 # Apply changes
 source ~/.bashrc
 
+# HOW TO: Run code in terminal 
+# Put below code into terminal to display file path
+find / -name "file_name.py" 2>/dev/null
+# In terminal, then run
+sudo python3 /correct/path/to/neopixeltest.py
+
 # HOW TO: Kill camera process
 # Find process ID in terminal
 lsof | grep video
