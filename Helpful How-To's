@@ -19,6 +19,8 @@ ps aux | grep libcamera-vid
 # Identify PID that corresponds to rpicam-vid, usually 4 digit integral
 # Kill PID
 sudo kill -9 PID
+# Kill all camera processes. 
+sudo killall libcamera-vid
 
 # HOW TO: Kill all python files
 pkill -f python
