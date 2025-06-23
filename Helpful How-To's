@@ -56,3 +56,5 @@ sudo nano /etc/chrony/chrony.conf
 # Localization:
   # Keyboard 
 
+# HOW TO: Run camera with test preview window for 1 minute. 
+libcamera-vid -t 60000
