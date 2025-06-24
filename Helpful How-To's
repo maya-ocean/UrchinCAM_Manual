@@ -7,6 +7,14 @@ python3 /home/pi/path/to/your_script.py &
 # Apply changes
 source ~/.bashrc
 
+# HOW TO: Run python script on boot using Crontab
+# Initialize Crontab
+sudo crontab -e
+# Select editor 1 if option presents.
+# Add command to bottom of script.
+@reboot python3 /path/to/your/script.py &
+# Save and exit. 
+
 # HOW TO: Run code in terminal 
 # Put below code into terminal to display file path
 find / -name "file_name.py" 2>/dev/null
