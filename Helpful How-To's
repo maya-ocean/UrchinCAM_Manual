@@ -45,6 +45,7 @@ cd UrchinPOD_repo
 git add --all
 git commit -m "Updated"
 git push origin main
+# Note: this won't work on UH internet because of the firewall. Instead use personal hotspot or other WiFi.
 
 # HOW TO: Set Raspberry Pi time
 # For now
