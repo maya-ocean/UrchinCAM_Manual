@@ -78,3 +78,11 @@ UUID=1234-ABCD /mnt/usb exfat uid=pi,gid=pi 0 0
 touch /mnt/usb/test.txt
 # Note: once it's mounted, the USB drive won't visually appear on the desktop or file manager. To see contents, input:
 ls /mnt/usb 
+
+# HOW TO: Unmount the USB drive 
+# Check where it's mounted
+lsblk
+# Sync all writes (flush pending data to disk)
+sync
+# If mounted at /mnt/usb, run:
+sudo umount /mnt/usb
