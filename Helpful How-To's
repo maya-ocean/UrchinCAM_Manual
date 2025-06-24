@@ -40,6 +40,12 @@ sudo reboot
 cd /path
 wget https://raw.githubusercontent.com/user/repository_name/branch/file_name.py
 
+# HOW TO: Commit and push to GitHub
+cd UrchinPOD_repo
+git add --all
+git commit -m "Updated"
+git push origin main
+
 # HOW TO: Set Raspberry Pi time
 # For now
 sudo date -s “2025-03-10 10:53:00”
