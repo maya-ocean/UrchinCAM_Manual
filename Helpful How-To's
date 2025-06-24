@@ -58,3 +58,16 @@ sudo nano /etc/chrony/chrony.conf
 
 # HOW TO: Run camera with test preview window for 1 minute. 
 libcamera-vid -t 60000
+
+# HOW TO: Configure Pi to auto-mount a USB drive on boot
+# Find the UUID of the USB
+sudo blkid
+# You'll get something like: /dev/sda1:UUID="1234-ABCD" TYPE="exfat"
+# Edit /etc/fstab:
+sudo nano /etc/fstab
+# Add this line at the bottom:
+UUID=1234-ABCD /mnt/usb exfat uid=pi,gid=pi 0 0 
+# Save, reboot, and test. 
+touch /mnt/usb/test.txt
+# Note: once it's mounted, the USB drive won't visually appear on the desktop or file manager. To see contents, input:
+ls /mnt/usb 
