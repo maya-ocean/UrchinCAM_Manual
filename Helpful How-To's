@@ -1,4 +1,4 @@
-# HOW TO: Run python code in bash
+# HOW TO: Run python code in bash -- didn't work after the first iteration.
 # Open bash in terminal
 nano ~/.bashrc
 # Scroll to the bottom and add
@@ -7,7 +7,7 @@ python3 /home/pi/path/to/your_script.py &
 # Apply changes
 source ~/.bashrc
 
-# HOW TO: Run python script on boot using Crontab
+# HOW TO: Run python script on boot using Crontab -- didn't work after the first iteration.
 # Initialize Crontab
 sudo crontab -e
 # Select editor 1 if option presents.
