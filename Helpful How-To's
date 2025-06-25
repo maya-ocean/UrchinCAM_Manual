@@ -15,6 +15,12 @@ sudo crontab -e
 @reboot python3 /path/to/your/script.py &
 # Save and exit. 
 
+# HOW TO: Run python script on boot using Witty Pi
+# Open Witty Pi directory.
+# Edit afterStartup.sh to run your script after the schedule has been set by Witty Pi. 
+sudo nano afterStartup.sh
+python3 /path/to/your/script.py &
+
 # HOW TO: Run code in terminal 
 # Put below code into terminal to display file path
 find / -name "file_name.py" 2>/dev/null
