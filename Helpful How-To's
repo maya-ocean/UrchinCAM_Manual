@@ -93,6 +93,7 @@ UUID=1234-ABCD /mnt/usb exfat uid=pi,gid=pi 0 0
 touch /mnt/usb/test.txt
 # Note: once it's mounted, the USB drive won't visually appear on the desktop or file manager. To see contents, input:
 ls /mnt/usb 
+# Note: if you have the Pi screening for a USB drive that isn't there, you make get an error on boot that says you're in "emergency mode"
 
 # HOW TO: Unmount the USB drive 
 # Check where it's mounted
