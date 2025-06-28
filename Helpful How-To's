@@ -84,6 +84,7 @@ libcamera-vid -t 60000
 # Find the UUID of the USB
 sudo blkid
 # You'll get something like: /dev/sda1:UUID="1234-ABCD" TYPE="exfat"
+# Note: some USB drives will have long, 36-character UUID's. Proceed as described below.
 # Edit /etc/fstab:
 sudo nano /etc/fstab
 # Add this line at the bottom:
