@@ -45,6 +45,23 @@ Note: UHM WiFi can cause issues. If that's the case, try using another network o
   ```
   libcamera-hello
   ```
+### Initialize USB Flash Drive
+Make a directory that the USB drive can be mounted to. 
+```
+cd ~
+sudo mkdir -p /mnt/DATA
+sudo chown pi:pi /mnt/DATA
+```
+
+Insert USB Flash Drive into OTG adapter. 
+
+Check to make sure the Raspberry Pi has recognized it. 
+```
+lsblk
+```
+You should see a device listed that is named sda1, sdb1, or something similar. 
+
+The UrchinCAM script will mount the USB drive on boot. 
 
 ### Set Witty Pi schedule
 
