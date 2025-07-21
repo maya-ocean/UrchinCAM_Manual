@@ -42,9 +42,13 @@ Note: UHM WiFi can cause issues. If that's the case, try using another network o
   ```
 
 ### Test camera 
-  ```
-  libcamera-hello
-  ```
+```
+libcamera-hello
+```
+Adjust camera lens by increasing the duration of the preview. The code runs the camera for 1 minute. 
+```
+libcamera-vid -t 60000
+```
 ### Initialize USB Flash Drive
 Make a directory that the USB drive can be mounted to. 
 ```
@@ -64,5 +68,14 @@ You should see a device listed that is named sda1, sdb1, or something similar.
 The UrchinCAM script will mount the USB drive on boot. 
 
 ### Set Witty Pi schedule
+Move the file on_28_off_2.wpi to the Schedules folder in the Witty Pi directory. 
+
+Choose a schedule script in the Witty Pi interface. 
+```
+pi@raspberrypi:~ $ cd wittypi
+pi@raspberrypi:~/wittypi $ ./wittyPi.sh
+What do you want to do? 6 (Choose schedule script)
+Which schedule script do you want to use? 3 (on_28_off_2.wpi)
+```
 
 ### Add Python script to run on boot using Witty Pi
