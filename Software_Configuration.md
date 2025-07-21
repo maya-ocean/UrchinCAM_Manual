@@ -37,7 +37,7 @@ Note: UHM WiFi can cause issues. If that's the case, try using another network o
 
 ### Clone GitHub Repository onto Pi
   ```
-  git clone https://github.com/maya-ocean/UrchinPOD_repo.git
+  git clone https://github.com/maya-ocean/UrchinCAM_repo.git
   cd UrchinPOD_repo
   ```
 
