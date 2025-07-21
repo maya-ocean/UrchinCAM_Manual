@@ -7,30 +7,35 @@ Install Raspberry Pi Imager
 Use Raspberry Pi Imager to download OS onto microSD
 PW: urchin$
 
+UrchinCAM Raspberry Pi Software Instructions
+---------------------------------------------------------------
+Set date and time to avoid errors with Raspberry Pi communication. 
+    sudo date -s “2025-03-10 10:53:00”
 
-UrchinCAM Raspberry Pi 
+Turn on WiFi and connect to network.
+Note: UHM WiFi can cause issues. If that's the case, try using another network or a phone hotspot. 
 
-
-Plug microSD into Raspberry Pi 
-Set date/time manually
-sudo date -s “2025-03-10 10:53:00”
-Turn on WiFi and connect to network (sometimes UHM is funky, try hotspot if errors)
 Install Witty Pi package
-pi@raspberrypi:~ $ wget https://www.uugear.com/repo/WittyPi4/install.sh
-pi@raspberrypi:~ $ sudo sh install.sh
-Reboot Pi
+  pi@raspberrypi:~ $ wget https://www.uugear.com/repo/WittyPi4/install.sh
+  pi@raspberrypi:~ $ sudo sh install.sh
+  Reboot Pi
+
 Use Witty Pi RTC to correct the time 
-cd wittypi
-pi@raspberrypi:~/wittypi $ ./wittyPi.sh
-3 (to sync with network time)
-13 (to exit)
-cd ~
+  cd wittypi
+  pi@raspberrypi:~/wittypi $ ./wittyPi.sh
+  3 (to sync with network time)
+  13 (to exit)
+  cd ~
+  
 Verify Git installation
-sudo apt-get install git
+  sudo apt-get install git
+
 Clone GitHub Repository onto Pi
-git clone https://github.com/maya-ocean/UrchinPOD_repo.git
-cd UrchinPOD_repo
-Test camera function 
-libcamera-hello 
+  git clone https://github.com/maya-ocean/UrchinPOD_repo.git
+  cd UrchinPOD_repo
+
+Test camera 
+  libcamera-hello 
+
 Set Witty Pi schedule
 Add urchincam_single_cycle.py script to the Witty Pi file afterStartup.sh
