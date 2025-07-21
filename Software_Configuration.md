@@ -78,4 +78,14 @@ What do you want to do? 6 (Choose schedule script)
 Which schedule script do you want to use? 3 (on_28_off_2.wpi)
 ```
 
-### Add Python script to run on boot using Witty Pi
+### Run Python script on boot using Witty Pi
+Open the Witty Pi after startup script. 
+```
+pi@raspberrypi:~ $ cd wittypi
+pi@raspberrypi:~/wittypi $ sudo nano afterStartup.sh
+```
+Add the following to the bottom of the script. 
+```
+python3 /home/pi/UrchinCAM_repo/UrchinCAM.py &
+```
+Save and exit. 
