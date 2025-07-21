@@ -1,15 +1,16 @@
-----------------------------------------------------
-UrchinCAM microSD Formatting and Initial Raspberry Pi Installation
-----------------------------------------------------
 
+UrchinCAM microSD Formatting and Initial Raspberry Pi OS Configuration
+---------------------------------------------------------------
+Erase microSD card and format as ExFAT (camille’s github)
 
-
-
-
-
-On laptop: Erase microSD card and format as ExFAT (camille’s github)
-On laptop: Use Raspberry Pi Imager to download OS onto microSD
+Install Raspberry Pi Imager 
+Use Raspberry Pi Imager to download OS onto microSD
 PW: urchin$
+
+
+UrchinCAM Raspberry Pi 
+
+
 Plug microSD into Raspberry Pi 
 Set date/time manually
 sudo date -s “2025-03-10 10:53:00”
