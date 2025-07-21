@@ -10,7 +10,7 @@ PW: urchin$
 # UrchinCAM Raspberry Pi Software Instructions
 
 ### Manually set date and time. 
-    sudo date -s “2025-03-10 10:53:00”
+    pi@raspberrypi:~ $ sudo date -s “2025-03-10 10:53:00”
     
 ### Turn on WiFi and connect to network.
 Note: UHM WiFi can cause issues. If that's the case, try using another network or a phone hotspot. 
@@ -31,15 +31,19 @@ Note: UHM WiFi can cause issues. If that's the case, try using another network o
   ```
 
 ### Verify Git installation
-  ```
-  sudo apt-get install git
-  ```
+```
+pi@raspberrypi:~ $ sudo apt-get install git
+```
 
 ### Clone GitHub Repository onto Pi
-  ```
-  git clone https://github.com/maya-ocean/UrchinCAM_repo.git
-  cd UrchinPOD_repo
-  ```
+```
+pi@raspberrypi:~ $ git clone https://github.com/maya-ocean/UrchinCAM_repo.git
+```
+Check to make sure full contents transferred. 
+```
+pi@raspberrypi:~ $ cd UrchinPOD_repo
+pi@raspberrypi:~/UrchinCAM_repo $ ls
+```
 
 ### Test camera 
 ```
@@ -47,21 +51,21 @@ libcamera-hello
 ```
 Adjust camera lens by increasing the duration of the preview. The code runs the camera for 1 minute. 
 ```
-libcamera-vid -t 60000
+pi@raspberrypi:~ $ libcamera-vid -t 60000
 ```
 ### Initialize USB Flash Drive
 Make a directory that the USB drive can be mounted to. 
 ```
-cd ~
-sudo mkdir -p /mnt/DATA
-sudo chown pi:pi /mnt/DATA
+pi@raspberrypi:~ $ cd ~
+pi@raspberrypi:~ $ sudo mkdir -p /mnt/DATA
+pi@raspberrypi:~ $ sudo chown pi:pi /mnt/DATA
 ```
 
 Insert USB Flash Drive into OTG adapter. 
 
 Check to make sure the Raspberry Pi has recognized it. 
 ```
-lsblk
+pi@raspberrypi:~ $ lsblk
 ```
 You should see a device listed that is named sda1, sdb1, or something similar. 
 
@@ -89,3 +93,36 @@ Add the following to the bottom of the script.
 python3 /home/pi/UrchinCAM_repo/UrchinCAM.py &
 ```
 Save (ctrl+O) and exit (ctrl+X). 
+
+
+# Extracting Video Files
+### Unmount the USB flash drive before ejecting
+Check where the USB drive is mounted.
+```
+pi@raspberrypi:~ $ lsblk
+```
+Sync all writes (flush pending data to disk)
+```
+pi@raspberrypi:~ $ sync
+```
+If mounted at /mnt/DATA, unmount.
+```
+pi@raspberrypi:~ $ sudo umount /mnt/DATA
+```
+Make sure the external drive icon has disappeared from the Raspberry Pi. Physically remove the USB flash drive.
+
+### Transfer and Convert Video Files
+Input USB flash drive to computer. 
+Video and log files should be inside UrchinCAM folder. Each video file should be ~60-100 MB. The video length will be listed as 00:00:00 and will be in .h264 file format. 
+[Maybe use Handbrake - mixed success]
+
+On Mac, open Terminal to install ffmpeg. 
+```
+brew install ffmpeg
+```
+
+Convert video files using ffmpeg. 
+In Terminal, input the below code. Replace input and output with the respective paths and file names. Note that you can drag and drop the file into Terminal and it will auto-fill the file information. 
+```
+ffmpeg -i input.h264 -c copy output.mp4
+```
