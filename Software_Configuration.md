@@ -48,4 +48,4 @@ Note: UHM WiFi can cause issues. If that's the case, try using another network o
 
 ### Set Witty Pi schedule
 
-### Add urchincam_single_cycle.py script to the Witty Pi file afterStartup.sh
+### Add Python script to run on boot using Witty Pi
