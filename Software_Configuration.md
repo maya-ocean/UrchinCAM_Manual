@@ -79,7 +79,7 @@ Which schedule script do you want to use? 3 (on_28_off_2.wpi)
 ```
 
 ### Run Python script on boot using Witty Pi
-Open the Witty Pi after startup script. 
+Open the Witty Pi after startup script. This will run the UrchinCAM Python script after Witty Pi has booted up the Raspberry Pi and after Witty Pi has finished running the schedule script. 
 ```
 pi@raspberrypi:~ $ cd wittypi
 pi@raspberrypi:~/wittypi $ sudo nano afterStartup.sh
