@@ -88,4 +88,4 @@ Add the following to the bottom of the script.
 ```
 python3 /home/pi/UrchinCAM_repo/UrchinCAM.py &
 ```
-Save and exit. 
+Save (ctrl+O) and exit (ctrl+X). 
