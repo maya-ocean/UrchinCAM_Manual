@@ -25,8 +25,8 @@ Note: UHM WiFi can cause issues. If that's the case, try using another network o
   ```
   pi@raspberrypi:~ $ cd wittypi
   pi@raspberrypi:~/wittypi $ ./wittyPi.sh
-  3 (to sync with network time)
-  13 (to exit)
+  3 (sync with network time)
+  13 (exit)
   cd ~
   ```
 
