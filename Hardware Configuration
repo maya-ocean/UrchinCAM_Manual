@@ -1,0 +1,23 @@
+Materials Needed for Camera
+1. Raspberry Pi Zero 2 W with Soldered 40-Pin Header
+2. Raspberry Pi High Quality Camera
+3. Raspberry Pi Standard-Mini Camera Cable
+4. 6mm 3MP Wide Angle Lens for Raspberry Pi HQ Camera - 3MP
+5. Witty Pi 4 Mini
+6. SanDisk 32 GB MicroSD Card
+7. Micro USB to USB A OTG Adapter 
+8. Samsung FIT Plus 256 GB Flash Drive
+
+Supplementary Hardware
+1. Monitor with HDMI input
+2. Mini HDMI to HDMI Cable
+3. Keyboard
+4. Mouse
+5. Micro USB to USB OTG Hub
+6. Micro USB Power Cable for Raspberry Pi Zero
+7. USB-C Power Cable for Witty Pi 4 Mini
+8. SanDisk microSD adapter
+
+Steps to Configure Hardware
+1. Connect camera via cable to Raspberry Pi
+2. Connect Witty Pi to Raspberry Pi
