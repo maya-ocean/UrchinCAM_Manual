@@ -123,8 +123,13 @@ On Mac, open Terminal to install ffmpeg.
 brew install ffmpeg
 ```
 
-Convert video files using ffmpeg. 
-In Terminal, input the below code. Replace input and output with the respective paths and file names. Note that you can drag and drop the file into Terminal and it will auto-fill the file information. 
+Batch convert video files using ffmpeg. 
+In Terminal, navigate to the folder that holds the input video files. 
+Create a folder for your output files. 
 ```
-ffmpeg -i input.h264 -c copy output.mp4
+mkdir converted
+```
+Use the following loop to convert all files in the folder. 
+```
+for f in *.h264; do ffmpeg -i "$f" -c copy "converted/${f%.*}.mp4"; done
 ```
