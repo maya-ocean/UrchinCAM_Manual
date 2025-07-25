@@ -134,3 +134,25 @@ Use the following loop to convert all files in the folder.
 ```
 for f in *.h264; do ffmpeg -i "$f" -c copy "converted/${f%.*}.mp4"; done
 ```
+
+
+# Interacting with GitHub
+### Configure Raspberry Pi with a GitHub Repository
+First, make sure that git is installed and up to date on the Raspberry Pi. 
+```
+sudo apt-get install git
+```
+Clone a GitHub repository to the Raspberry Pi. Replace user-name and repository-name with the appropriate names.
+```
+git clone https://github.com/user-name/repository-name.git
+```
+Check to make sure that the repository is now copied onto the Raspberry Pi. 
+```
+cd repository-name
+ls
+```
+[Link to video tutorial]([https://www.youtube.com/watch?v=9CULlsc5BBU])
+### Initial Commit and Push to GitHub
+
+### Commit and Push to GitHub
+
