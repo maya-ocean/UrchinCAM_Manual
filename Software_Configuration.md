@@ -102,7 +102,7 @@ pi@raspberrypi:~/wittypi $ sudo nano afterStartup.sh
 ```
 Add the following to the bottom of the script. 
 ```
-sudo /home/pi/UrchinCAM_repo/UrchinCAM.py &
+/home/pi/UrchinCAM_repo/UrchinCAM.py &
 ```
 Save (ctrl+O) and exit (ctrl+X). 
 
