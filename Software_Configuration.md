@@ -193,4 +193,11 @@ This process may yield a prompt to login to the GitHub account with a username a
 For details on how to create a Personal Access Token, refer to [this guide from GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic). 
 
 ### Commit and Push to GitHub
-
+After the first time pushing to GitHub from the Raspberry Pi, use the following commands to push changes to GitHub from the Pi. 
+```
+cd /path/to/repository
+git add --all
+git commit -m "Note any changes"
+git push -u origin main
+```
+[Link to video tutorial](https://www.youtube.com/watch?v=WsGhCOEIDXo)
