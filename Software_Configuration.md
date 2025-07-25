@@ -96,7 +96,7 @@ Save (ctrl+O) and exit (ctrl+X).
 
 
 # Extracting Video Files
-### Unmount the USB flash drive before ejecting
+### Unmount the USB flash drive
 Check where the USB drive is mounted.
 ```
 pi@raspberrypi:~ $ lsblk
@@ -115,18 +115,19 @@ Note: You may get an error indicating the the drive is still in use. In that cas
 
 ### Transfer and Convert Video Files
 Input USB flash drive to computer. 
-Video and log files should be inside UrchinCAM folder. Each video file should be ~60-100 MB. The video length will be listed as 00:00:00 and will be in .h264 file format. 
-[Maybe use Handbrake - mixed success]
+Video files should be inside UrchinCAM folder. Each video file should be ~60-100 MB. The video length will be listed as 00:00:00 and will be in .h264 file format. 
+
+Batch convert video files using ffmpeg. 
 
 On Mac, open Terminal to install ffmpeg. 
 ```
 brew install ffmpeg
 ```
 
-Batch convert video files using ffmpeg. 
-In Terminal, navigate to the folder that holds the input video files. 
-Create a folder for your output files. 
+Navigate to the folder that holds the input video files. 
+Create a folder to hold the converted files. 
 ```
+cd /path/to/your/folder
 mkdir converted
 ```
 Use the following loop to convert all files in the folder. 
