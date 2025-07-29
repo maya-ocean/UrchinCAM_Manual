@@ -53,7 +53,7 @@ Adjust camera lens by increasing the duration of the preview. The code runs the 
 ```
 pi@raspberrypi:~ $ libcamera-vid -t 60000
 ```
-### Initialize USB Flash Drive
+### Initialize USB Flash Drive (if applicable)
 Make a directory that the USB drive can be mounted to. 
 ```
 pi@raspberrypi:~ $ cd ~
@@ -116,6 +116,21 @@ pi ALL=(ALL) NOPASSWD: /home/pi/UrchinCAM_repo/UrchinCAM.sh &
 ```
 Now, the Pi will NOT prompt for a password when running the script automatically on boot. 
 
+
+### Run Python script on boot with .conf file
+Download the Supervisor package. 
+```
+sudo apt install supervisor
+```
+Place the config file inside /etc/supervisor/conf.d/ . 
+```
+sudo cp /path/to/config/file.conf /etc/supervisor/conf.d/
+```
+Make sure that the file has been created inside supervisor and that the path and file names are correct. 
+```
+cd /etc/supervisor/conf.d/
+sudo nano file.conf
+```
 
 # Extracting Video Files
 ### Unmount the USB flash drive
