@@ -131,6 +131,19 @@ Make sure that the file has been created inside supervisor and that the path and
 cd /etc/supervisor/conf.d/
 sudo nano file.conf
 ```
+To stop the file from running, open the .conf script, in this case named urchincam.conf, and change autostart and autorestart from true to false. 
+Then, use the following command to stop the current iteration of the script. 
+```
+sudo supervisorctl stop urchincam
+```
+To restart, change autostart and autorestart back to true, and run the following command. 
+```
+sudo supervisorctl start urchincam
+```
+To check whether supervisor is running the script, use this command. 
+```
+sudo supervisorctl status
+```
 
 # Extracting Video Files
 ### Unmount the USB flash drive
