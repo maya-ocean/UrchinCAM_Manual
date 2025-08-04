@@ -211,8 +211,15 @@ Make sure the external drive icon has disappeared from the Raspberry Pi. Physica
 Note: You may get an error indicating the the drive is still in use. In that case, remove your script from the Witty Pi after startup file and reboot the Pi. Now try to unmount again. 
 
 ### Transfer and Convert Video Files
-Input USB flash drive to computer. 
-Video files should be inside UrchinCAM folder. Each video file should be ~60-100 MB. The video length will be listed as 00:00:00 and will be in .h264 file format. 
+Input USB flash drive to Raspberry Pi. 
+Video files should be in /home/pi. Each video file should be ~60-100 MB. The video will be in .mp4 file format. 
+
+Copy video files onto USB thumbdrive. 
+```
+sudo cp *.mp4 /path/to/USB/drive
+```
+When complete, unmount the USB thumbdrive as described above or by clicking on the eject icon. 
+Once the USB drive icon is no longer visible on the Pi, remove the USB drive from the pi and insert into the computer. 
 
 Batch convert video files using ffmpeg. 
 
