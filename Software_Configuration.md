@@ -1,9 +1,27 @@
 
 # UrchinCAM microSD Formatting and Initial Raspberry Pi OS Configuration
 
-Erase microSD card and format as ExFAT (camille’s github)
+### SD Card Formatting On Mac
+Use SD Card Formatter to format the SD card. 
+<img width="409" height="413" alt="Screenshot 2025-08-04 at 9 47 25 AM" src="https://github.com/user-attachments/assets/93f356f8-bbe8-4203-b2c6-cee5f482527a" />
 
-Install Raspberry Pi Imager 
+Open Disk Utility. Navigate to the SD card and select Erase. Select MS-DOS (FAT) or MS-DOS (FAT32) and erase. 
+<img width="804" height="467" alt="Screenshot 2025-08-04 at 9 48 01 AM" src="https://github.com/user-attachments/assets/b30ab9c3-39e3-49ab-a0d4-4e25d4b10550" />
+
+### Install Raspberry Pi OS on SD Card
+Install Raspberry Pi Imager at [this weblink](https://www.raspberrypi.com/software/). 
+
+Open Raspberry Pi Imager and specify the Pi device, the desired OS, and the SD card. 
+<img width="674" height="473" alt="Screenshot 2025-08-04 at 9 53 15 AM" src="https://github.com/user-attachments/assets/6ef890e8-ba3e-4f3b-aeb1-d0ed0d2581df" />
+
+Select Edit Settings. 
+<img width="676" height="470" alt="Screenshot 2025-08-04 at 9 54 02 AM" src="https://github.com/user-attachments/assets/9ac2890c-8d56-4619-b773-656bbee3b775" />
+
+User: pi
+Password: urchin$
+Time Zone: Pacific/Honolulu 
+Select Yes. 
+
 Use Raspberry Pi Imager to download OS onto microSD
 PW: urchin$
 
