@@ -18,12 +18,14 @@ Select Edit Settings.
 <img width="676" height="470" alt="Screenshot 2025-08-04 at 9 54 02 AM" src="https://github.com/user-attachments/assets/9ac2890c-8d56-4619-b773-656bbee3b775" />
 
 User: pi
+
 Password: urchin$
+
 Time Zone: Pacific/Honolulu 
+
 Select Yes. 
 
-Use Raspberry Pi Imager to download OS onto microSD
-PW: urchin$
+Wait for write to complete and then insert microSD card into Raspberry Pi Zero 2 W and proceed directly on the pi desktop interface. 
 
 # UrchinCAM Raspberry Pi Software Instructions
 
