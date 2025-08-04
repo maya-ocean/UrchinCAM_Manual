@@ -66,6 +66,12 @@ Check to make sure full contents transferred.
 pi@raspberrypi:~ $ cd UrchinCAM_repo
 pi@raspberrypi:~/UrchinCAM_repo $ ls
 ```
+Copy cam.py to /home/pi. 
+```
+pi@raspberrypi:~/UrchinCAM_repo $ cp cam.py /home/pi/
+```
+
+
 
 ### Test camera 
 ```
@@ -146,12 +152,12 @@ sudo apt install supervisor
 ```
 Place the config file inside /etc/supervisor/conf.d/ . 
 ```
-sudo cp /path/to/config/file.conf /etc/supervisor/conf.d/
+sudo cp /home/pi/UrchinCAM_repo/urchincam.conf /etc/supervisor/conf.d/
 ```
 Make sure that the file has been created inside supervisor and that the path and file names are correct. 
 ```
 cd /etc/supervisor/conf.d/
-sudo nano file.conf
+sudo nano urchincam.conf
 ```
 To stop the file from running, open the .conf script, in this case named urchincam.conf, and change autostart and autorestart from true to false. 
 Then, use the following command to stop the current iteration of the script. 
