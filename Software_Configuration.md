@@ -16,6 +16,7 @@ Open Raspberry Pi Imager and specify the Pi device, the desired OS, and the SD c
 <img width="674" height="473" alt="Screenshot 2025-08-04 at 9 53 15 AM" src="https://github.com/user-attachments/assets/6ef890e8-ba3e-4f3b-aeb1-d0ed0d2581df" />
 
 Select Edit Settings. 
+
 <img width="676" height="470" alt="Screenshot 2025-08-04 at 9 54 02 AM" src="https://github.com/user-attachments/assets/9ac2890c-8d56-4619-b773-656bbee3b775" />
 
 User: pi
