@@ -172,6 +172,25 @@ To check whether supervisor is running the script, use this command.
 ```
 sudo supervisorctl status
 ```
+### Troubleshooting with Supervisor
+To watch log file live:
+```
+tail -f /var/log/supervisor/urchincam-stderr*.log
+```
+To open last 20 lines of log file: 
+```
+tail -n 20 /var/log/supervisor/urchincam-stderr*.log
+```
+To registart changes with the .conf file with supervisor or restart supervisor. 
+```
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl restart urchincam
+```
+Check the status of the .conf process in supervisor. 
+```
+sudo supervisorctl status
+```
 
 # Extracting Video Files
 ### Unmount the USB flash drive
