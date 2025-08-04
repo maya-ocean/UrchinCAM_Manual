@@ -3,6 +3,7 @@
 
 ### SD Card Formatting On Mac
 Use SD Card Formatter to format the SD card. 
+
 <img width="409" height="413" alt="Screenshot 2025-08-04 at 9 47 25 AM" src="https://github.com/user-attachments/assets/93f356f8-bbe8-4203-b2c6-cee5f482527a" />
 
 Open Disk Utility. Navigate to the SD card and select Erase. Select MS-DOS (FAT) or MS-DOS (FAT32) and erase. 
