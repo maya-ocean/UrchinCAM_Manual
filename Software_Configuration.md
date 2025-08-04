@@ -63,7 +63,7 @@ pi@raspberrypi:~ $ git clone https://github.com/maya-ocean/UrchinCAM_repo.git
 ```
 Check to make sure full contents transferred. 
 ```
-pi@raspberrypi:~ $ cd UrchinPOD_repo
+pi@raspberrypi:~ $ cd UrchinCAM_repo
 pi@raspberrypi:~/UrchinCAM_repo $ ls
 ```
 
