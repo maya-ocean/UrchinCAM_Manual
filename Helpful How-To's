@@ -80,6 +80,14 @@ sudo nano /etc/chrony/chrony.conf
 # HOW TO: Run camera with test preview window for 1 minute. 
 libcamera-vid -t 60000
 
+# HOW TO: Unmount the USB drive 
+# Check where it's mounted
+lsblk
+# Sync all writes (flush pending data to disk)
+sync
+# If mounted at /mnt/usb, run:
+sudo umount /mnt/usb
+
 # (!) *** DO NOT DO THIS *** messing with /etc/fstab can lock you out of your Pi if the Pi can't register the USB device!
 # HOW TO: Configure Pi to auto-mount a USB drive on boot 
 # Find the UUID of the USB
@@ -96,10 +104,3 @@ touch /mnt/usb/test.txt
 ls /mnt/usb 
 # Note: if you have the Pi screening for a USB drive that isn't there, you make get an error on boot that says you're in "emergency mode"
 
-# HOW TO: Unmount the USB drive 
-# Check where it's mounted
-lsblk
-# Sync all writes (flush pending data to disk)
-sync
-# If mounted at /mnt/usb, run:
-sudo umount /mnt/usb
